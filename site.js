@@ -41,7 +41,10 @@ const vue_app = Vue.createApp({
       }
     },
       methods: {
-            /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
+            handleClick: getMonthText(dateArray) {
+                  alert(text)
+            }
+
       }
 })
 
