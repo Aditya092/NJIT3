@@ -41,7 +41,7 @@ const vue_app = Vue.createApp({
       }
     },
       methods: {
-              getMonthFormat(dateArray){
+                  getMonthFormat(dateArray){
                   let month = "";
                   switch(dateArray[1]) {
                         case 1: 
@@ -81,11 +81,14 @@ const vue_app = Vue.createApp({
                               month = "December";
                               break;
                   }
-                   return + ", " + dateArray[2]  + ", " + dateArray[0] + ", "    
+                   return month + ", " + dateArray[2]  + ", " + dateArray[0] + ", " ;   
+                    
             },
+           
             },
 
       }
 )
 
 vue_app.mount("#vue_app")
+
