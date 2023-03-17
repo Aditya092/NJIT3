@@ -41,6 +41,18 @@ const vue_app = Vue.createApp({
       }
     },
       methods: {
+            posterClick(movie){
+                  movie.posterindex++;
+                  if (movie.posterindex > movie.posters.length - 1) {
+                        movie.posterindex = 0;
+                        }  
+                  },
+              timeText(minutes) {
+            var hours = Math.floor(minutes / 60);
+            var minutes = minutes % 60;
+            return hours + ' hours, ' + minutes + ' minutes';           
+                },
+
                   getMonthFormat(dateArray){
                   let month = "";
                   switch(dateArray[1]) {
@@ -91,4 +103,3 @@ const vue_app = Vue.createApp({
 )
 
 vue_app.mount("#vue_app")
-
